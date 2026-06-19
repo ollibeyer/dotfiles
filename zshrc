@@ -12,9 +12,10 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # --- Industrial Aliase ---
 alias nv='nvim'
-alias vim='nvim'
+alias tm='tmux'
 alias gs='git status'
 alias gl='git log'
+alias vim='nvim'
 alias top='htop'
 alias cat='bat'
 alias ls='eza --icons --group-directories-first'
