@@ -15,6 +15,7 @@ alias nv='nvim'
 alias tm='tmux'
 alias gs='git status'
 alias gl='git log'
+alias ask='mods'
 alias vim='nvim'
 alias top='htop'
 alias cat='bat'
@@ -27,6 +28,7 @@ eval "$(starship init zsh)"
 # Damit das Terminal bei großen Git-Repos nicht ruckelt
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-export MODS_API_KEY="DEIN_GEMINI_KEY"
-export MODS_PROVIDER="google"
-export MODS_MODEL="gemini-1.5-flash"
+# Lade geheime API-Keys, falls die Datei existiert
+if [ -f "$HOME/.env.secrets" ]; then
+    source "$HOME/.env.secrets"
+fi
