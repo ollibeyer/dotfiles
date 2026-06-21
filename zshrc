@@ -15,7 +15,6 @@ alias nv='nvim'
 alias tm='tmux'
 alias gs='git status'
 alias gl='git log'
-alias ask='mods'
 alias vim='nvim'
 alias top='htop'
 alias cat='bat'
@@ -32,3 +31,15 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 if [ -f "$HOME/.env.secrets" ]; then
     source "$HOME/.env.secrets"
 fi
+
+# Konfigurationswechsel in mods
+function ask() {
+  if [ -f "$HOME/.config/mods/profiles/$1.env" ]; then
+    # Setze temporäre Umgebung für den Befehl
+    export $(cat "$HOME/.config/mods/profiles/$1.env" | xargs)
+    # Führe mods aus
+    mods "${@:2}"
+  else
+    echo "Profil '$1' nicht gefunden."
+  fi
+}
