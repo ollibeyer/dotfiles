@@ -37,9 +37,32 @@ chmod +x install.sh
 * **`tmux.conf`**: Konfiguration für Fenster-Splits, Mouse-Support und `vim-tmux-navigator`.
 * **`zshrc`**: Enthält Aliase, Pfad-Konfigurationen und die Logik für das automatische Attachen an `tmux`.
 
-## 🤖 KI-Integration
+## 🤖 KI-Unterstützung
 
-Dieses Setup nutzt KI-Assistenz für maximale Produktivität:
-* **CodeCompanion (Neovim)**: Verbunden mit GitHub Copilot für Coding-Unterstützung direkt im Editor.
+Dieses Setup nutzt **GitHub Copilot** als zentrale KI-Komponente im Editor.
+
+- **Copilot (Neovim)**  
+  → Inline-Code-Vervollständigung direkt beim Schreiben  
+  → Kontextbasierte Vorschläge im aktuellen Buffer  
+  → Minimaler Overhead, keine zusätzlichen AI-Frameworks notwendig  
+
+👉 Fokus liegt auf:
+
+- schnellem Feedback beim Tippen  
+- kontinuierlichem Coding-Flow  
+- Unterstützung ohne Kontextwechsel  
+
 ---
-*Konfiguriert für maximale Effizienz – Codieren, nicht konfigurieren.*
+
+## ✨ Philosophie dieses Setups
+
+- 🔹 **Minimal statt overengineered**  
+- 🔹 **Stabil statt experimentell**  
+- 🔹 **Schnell statt konfigurationslastig**  
+
+👉 Fokus liegt auf:
+
+- effizientem Navigieren  
+- schnellem Editieren  
+- konstantem Flow beim Entwickeln  
+
