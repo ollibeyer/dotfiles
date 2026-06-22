@@ -26,20 +26,3 @@ eval "$(starship init zsh)"
 # --- Performance-Fix für Syntax-Highlighting ---
 # Damit das Terminal bei großen Git-Repos nicht ruckelt
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-# Lade geheime API-Keys, falls die Datei existiert
-if [ -f "$HOME/.env.secrets" ]; then
-    source "$HOME/.env.secrets"
-fi
-
-# Konfigurationswechsel in mods
-function ask() {
-  if [ -f "$HOME/.config/mods/profiles/$1.env" ]; then
-    # Setze temporäre Umgebung für den Befehl
-    export $(cat "$HOME/.config/mods/profiles/$1.env" | xargs)
-    # Führe mods aus
-    mods "${@:2}"
-  else
-    echo "Profil '$1' nicht gefunden."
-  fi
-}

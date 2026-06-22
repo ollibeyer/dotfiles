@@ -41,6 +41,5 @@ chmod +x install.sh
 
 Dieses Setup nutzt KI-Assistenz für maximale Produktivität:
 * **CodeCompanion (Neovim)**: Verbunden mit GitHub Copilot für Coding-Unterstützung direkt im Editor.
-* **mods (CLI)**: Verbunden mit Google Gemini für komplexe System-Fragen und Skripting direkt im Terminal.
 ---
 *Konfiguriert für maximale Effizienz – Codieren, nicht konfigurieren.*
