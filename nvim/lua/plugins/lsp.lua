@@ -13,11 +13,11 @@ return {
 
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "pyright" },
+      ensure_installed = { "lua_ls", "pyright", "clangd", "ts_ls", "dockerls", "bashls", "jsonls", "yamlls" },
     })
 
     local lspconfig = require("lspconfig")
-    local servers = { "lua_ls", "pyright" }
+    local servers = { "lua_ls", "pyright", "clangd", "ts_ls", "dockerls", "bashls", "jsonls", "yamlls" }
 
     for _, server in ipairs(servers) do
       lspconfig[server].setup({})
