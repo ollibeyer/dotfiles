@@ -1,23 +1,16 @@
 return {
   "olimorris/codecompanion.nvim",
+  lazy = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
-    "hrsh7th/nvim-cmp",
   },
-  config = function()
-    require("codecompanion").setup({
-      strategies = {
-        chat = { adapter = "copilot" },
-        inline = { adapter = "copilot" },
-      },
-      adapters = {
-        copilot = function()
-          return require("codecompanion.adapters").extend("copilot")
-        end,
-      },
-    })
-  end,
+  opts = {
+    strategies = {
+      chat = { adapter = "copilot" },
+      inline = { adapter = "copilot" },
+    },
+  },
   keys = {
     { "<leader>ac", "<cmd>CodeCompanionChat<cr>", mode = { "n", "v" } },
   },
