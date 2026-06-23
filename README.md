@@ -46,8 +46,6 @@ Dieses Setup nutzt **GitHub Copilot** als zentrale KI-Komponente im Editor.
   → Kontextbasierte Vorschläge im aktuellen Buffer  
   → Minimaler Overhead, keine zusätzlichen AI-Frameworks notwendig  
 
----
-
 ## ✨ Philosophie dieses Setups
 
 - **Minimal statt overengineered**  
