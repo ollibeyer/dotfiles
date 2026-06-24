@@ -7,6 +7,7 @@ $directory\
 [](fg:#3b4261 bg:#16161e)\
 $git_branch\
 $git_status\
+$python\
 [ ](fg:#16161e)\
 $character"""
 
@@ -28,7 +29,13 @@ format = '[ $symbol $branch ]($style)'
 style = "bg:#16161e fg:#f7768e"
 format = '[$all_status$ahead_behind ]($style)'
 
-# 5. Der Prompt-Charakter (Das "Industrial" Ende)
+# 5. Python (Die Schlange, die du zähmst)
+[python]
+symbol = "🐍"
+style = "bg:#16161e fg:#9ece6a"
+format = '[ $symbol ($virtualenv) ]($style)'
+
+# 6. Der Prompt-Charakter (Das "Industrial" Ende)
 [character]
 success_symbol = "[❯](bold #9ece6a)"
 error_symbol = "[❯](bold #f7768e)"
