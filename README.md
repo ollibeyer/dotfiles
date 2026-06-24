@@ -41,6 +41,7 @@ chmod +x install.sh
 
 Dieses Setup nutzt **GitHub Copilot** als zentrale KI-Komponente im Editor.
 
+- **GitHub Copilot CLI**: Als nativer Agent direkt im Terminal verfügbar. Er unterstützt dich bei komplexen Workflows, der Navigation in Codebasen und der Issue-Bearbeitung.
 - **Copilot (Neovim)**  
   → Inline-Code-Vervollständigung direkt beim Schreiben  
   → Kontextbasierte Vorschläge im aktuellen Buffer  
