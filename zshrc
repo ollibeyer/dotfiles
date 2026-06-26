@@ -19,6 +19,7 @@ alias vim='nvim'
 alias top='htop'
 alias cat='bat'
 alias ls='eza --icons --group-directories-first'
+alias co='copilot'
 
 # --- Prompt: Starship (Cyberpunk-Look) ---
 eval "$(starship init zsh)"
