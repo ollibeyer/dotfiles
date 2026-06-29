@@ -14,7 +14,6 @@ Bevor du die Konfigurationen verlinkst, stelle sicher, dass die folgenden Pakete
 * **Ripgrep**: Für schnelle textbasierte Suchen.
 * **Fzf**: Für Fuzzy-Finding.
 * **Htop**: Zur interaktiven Systemüberwachung.
-* **GitHub CLI (gh)**: Für die Authentifizierung von GitHub Copilot.
 
 ### 2. Terminal-Emulatoren & Fonts
 Für das beste visuelle Erlebnis empfehle ich:
