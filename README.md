@@ -25,7 +25,7 @@ Für das beste visuelle Erlebnis empfehle ich:
 ## 🚀 Installation
 
 ```bash
-git clone git@github.com:DEIN_USER/dotfiles.git ~/dotfiles
+git clone git@github.com:ollibeyer/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow zsh tmux nvim starship
 ```
