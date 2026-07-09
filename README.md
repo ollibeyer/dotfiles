@@ -14,6 +14,8 @@ Bevor du die Konfigurationen verlinkst, stelle sicher, dass die folgenden Pakete
 * **Ripgrep**: Für schnelle textbasierte Suchen.
 * **Fzf**: Für Fuzzy-Finding.
 * **Htop**: Zur interaktiven Systemüberwachung.
+* **zoxide**: Intelligenter `cd`-Ersatz, der besuchte Verzeichnisse nach Häufigkeit bewertet. Statt langer Pfade reicht `z <teilname>`.
+* **atuin**: Ersetzt die Standard-Shell-History durch eine durchsuchbare SQLite-Datenbank – mit Zeitstempeln, Exit-Codes und Arbeitsverzeichnis pro Eintrag.
 
 ### 2. Terminal-Emulatoren & Fonts
 Für das beste visuelle Erlebnis empfehle ich:
@@ -22,19 +24,85 @@ Für das beste visuelle Erlebnis empfehle ich:
 
 ## 🚀 Installation
 
-Um die Konfigurationen zu aktivieren, führe das mitgelieferte Installationsskript aus:
-
 ```bash
 git clone git@github.com:DEIN_USER/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-chmod +x install.sh
-./install.sh
+stow zsh tmux nvim starship
 ```
+
+Das war es. Stow legt alle Symlinks ins Heimverzeichnis. Kein Skript, keine manuellen `ln`-Befehle.
+
 ## ⚙️ Architektur der Konfiguration
 
-* **`nvim/`**: Enthält die gesamte Neovim-Konfiguration.
-* **`tmux.conf`**: Konfiguration für Fenster-Splits, Mouse-Support und `vim-tmux-navigator`.
-* **`zshrc`**: Enthält Aliase, Pfad-Konfigurationen und die Logik für das automatische Attachen an `tmux`.
+Das Repo ist in **Stow-Pakete** aufgeteilt – jedes Unterverzeichnis spiegelt exakt die Struktur von `$HOME`:
+
+```
+~/dotfiles/
+├── zsh/
+│   └── .zshrc                        → ~/.zshrc
+├── tmux/
+│   └── .tmux.conf                    → ~/.tmux.conf
+├── starship/
+│   └── .config/
+│       └── starship.toml             → ~/.config/starship.toml
+└── nvim/
+    └── .config/
+        └── nvim/                     → ~/.config/nvim/
+            ├── init.lua
+            └── lua/
+```
+
+* **`zsh/`**: Aliase, Pfad-Konfigurationen, zoxide- und atuin-Integration.
+* **`tmux/`**: Fenster-Splits, Mouse-Support und `vim-tmux-navigator`.
+* **`nvim/`**: Gesamte Neovim-Konfiguration (lazy.nvim, LSP, Copilot).
+* **`starship/`**: Prompt-Konfiguration.
+
+## 📦 Dotfiles mit GNU Stow verwalten
+
+[GNU Stow](https://www.gnu.org/software/stow/) legt Symlinks an, indem es die Verzeichnisstruktur eines Pakets ins übergeordnete Verzeichnis (standardmäßig `$HOME`) spiegelt – ohne die Dateien selbst zu verändern.
+
+### Symlinks setzen
+
+```bash
+cd ~/dotfiles
+
+stow zsh        # legt ~/.zshrc an
+stow tmux       # legt ~/.tmux.conf an
+stow nvim       # legt ~/.config/nvim an
+stow starship   # legt ~/.config/starship.toml an
+
+# Oder alles auf einmal:
+stow zsh tmux nvim starship
+```
+
+### Wichtige Befehle
+
+| Befehl | Bedeutung |
+|---|---|
+| `stow <paket>` | Symlinks anlegen |
+| `stow -D <paket>` | Symlinks entfernen |
+| `stow -R <paket>` | Symlinks neu anlegen (nach Änderungen) |
+| `stow -n <paket>` | Dry-run – zeigt, was passieren würde, ohne etwas zu tun |
+
+### Konflikt lösen
+
+Existiert eine Zieldatei bereits als echte Datei (z.B. `~/.zshrc` vom System), verweigert Stow mit einem Fehler. Lösung:
+
+```bash
+mv ~/.zshrc ~/.zshrc.bak   # Backup anlegen
+stow zsh                   # jetzt klappt es
+```
+
+### Neue Konfigurationsdatei hinzufügen
+
+```bash
+# Beispiel: Ghostty-Terminal-Config
+mkdir -p ~/dotfiles/ghostty/.config/ghostty
+mv ~/.config/ghostty/config ~/dotfiles/ghostty/.config/ghostty/config
+cd ~/dotfiles && stow ghostty
+```
+
+Die Config liegt ab jetzt im Repo und ist per Symlink aktiv – bei jedem `git pull` sofort wirksam.
 
 ## 🤖 KI-Unterstützung
 

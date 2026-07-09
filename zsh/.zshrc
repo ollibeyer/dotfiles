@@ -24,6 +24,13 @@ alias co='copilot'
 # --- Prompt: Starship (Cyberpunk-Look) ---
 eval "$(starship init zsh)"
 
+# --- Navigation: Zoxide (Intelligentes Verzeichnis-Wechseln) ---
+eval "$(zoxide init zsh)"
+
 # --- Performance-Fix für Syntax-Highlighting ---
 # Damit das Terminal bei großen Git-Repos nicht ruckelt
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# --- History: Atuin (Intelligente Shell-History) ---
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
