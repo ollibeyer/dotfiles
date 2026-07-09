@@ -4,11 +4,13 @@ export EDITOR=nvim
 
 # --- Oh-My-Zsh Basis ---
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 
 # --- Plugins: Das "Mitdenkende" Terminal ---
-# Hier laden wir die Plugins, die wir gerade installiert haben
+# Muss VOR source oh-my-zsh.sh stehen, sonst werden Plugins ignoriert
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+# --- Oh-My-Zsh laden ---
+source $ZSH/oh-my-zsh.sh
 
 # --- Industrial Aliase ---
 alias nv='nvim'
