@@ -75,35 +75,6 @@ stow starship   # legt ~/.config/starship.toml an
 stow zsh tmux nvim starship
 ```
 
-### Wichtige Befehle
-
-| Befehl | Bedeutung |
-|---|---|
-| `stow <paket>` | Symlinks anlegen |
-| `stow -D <paket>` | Symlinks entfernen |
-| `stow -R <paket>` | Symlinks neu anlegen (nach Änderungen) |
-| `stow -n <paket>` | Dry-run – zeigt, was passieren würde, ohne etwas zu tun |
-
-### Konflikt lösen
-
-Existiert eine Zieldatei bereits als echte Datei (z.B. `~/.zshrc` vom System), verweigert Stow mit einem Fehler. Lösung:
-
-```bash
-mv ~/.zshrc ~/.zshrc.bak   # Backup anlegen
-stow zsh                   # jetzt klappt es
-```
-
-### Neue Konfigurationsdatei hinzufügen
-
-```bash
-# Beispiel: Ghostty-Terminal-Config
-mkdir -p ~/dotfiles/ghostty/.config/ghostty
-mv ~/.config/ghostty/config ~/dotfiles/ghostty/.config/ghostty/config
-cd ~/dotfiles && stow ghostty
-```
-
-Die Config liegt ab jetzt im Repo und ist per Symlink aktiv – bei jedem `git pull` sofort wirksam.
-
 ## 🤖 KI-Unterstützung
 
 Dieses Setup nutzt **GitHub Copilot** als zentrale KI-Komponente im Editor.
