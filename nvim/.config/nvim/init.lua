@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = { 
     { import = "plugins" },
-    { "folke/tokyonight.nvim", priority = 1000, config = function() vim.cmd.colorscheme("tokyonight-night") end },
+    { "folke/tokyonight.nvim", priority = 1000, config = function() vim.cmd.colorscheme("tokyonight") end },
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     { "nvim-tree/nvim-tree.lua", config = true },
    },
