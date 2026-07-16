@@ -19,7 +19,7 @@ Bevor du die Konfigurationen verlinkst, stelle sicher, dass die folgenden Pakete
 
 ### 2. Terminal-Emulatoren & Fonts
 Für das beste visuelle Erlebnis empfehle ich:
-* **Terminal**: Alacritty oder Kitty.
+* **Terminal**: Alacritty, Kitty oder Ghostty.
 * **Font**: Eine **Nerd Font** (z.B. `JetBrainsMono Nerd Font`), um Symbole korrekt darzustellen.
 
 ## 🚀 Installation
