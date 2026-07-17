@@ -1,7 +1,7 @@
 # 1. Globale Formatierung (die Kette der Elemente)
 format = """
 [](#7aa2f7)\
-[ ](bg:#7aa2f7 fg:#1a1b26)\
+[ ](bg:#7aa2f7 fg:#1a1b26)\
 [](bg:#3b4261 fg:#7aa2f7)\
 $directory\
 [](fg:#3b4261 bg:#16161e)\
@@ -10,31 +10,31 @@ $git_status\
 $python\
 [ ](fg:#16161e)\
 $character"""
-
+ 
 # 2. Verzeichnis-Modul (Der Ort, an dem du arbeitest)
 [directory]
 style = "bg:#3b4261 fg:#c0caf5"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
-
+ 
 # 3. Git Branch (Deine Projekt-Identität)
 [git_branch]
 symbol = "•"
 style = "bg:#16161e fg:#7dcfff"
 format = '[ $symbol $branch ]($style)'
-
+ 
 # 4. Git Status (Was ist passiert?)
 [git_status]
 style = "bg:#16161e fg:#f7768e"
 format = '[$all_status$ahead_behind ]($style)'
-
+ 
 # 5. Python (Die Schlange, die du zähmst)
 [python]
 symbol = "🐍"
 style = "bg:#16161e fg:#9ece6a"
 format = '[ $symbol ($virtualenv) ]($style)'
-
+ 
 # 6. Der Prompt-Charakter (Das "Industrial" Ende)
 [character]
 success_symbol = "[❯](bold #9ece6a)"

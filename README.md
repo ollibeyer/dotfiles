@@ -13,13 +13,12 @@ Bevor du die Konfigurationen verlinkst, stelle sicher, dass die folgenden Pakete
 * **Git**: Zur Verwaltung dieses Repositories.
 * **Ripgrep**: Für schnelle textbasierte Suchen.
 * **Fzf**: Für Fuzzy-Finding.
-* **Htop**: Zur interaktiven Systemüberwachung.
+* **Htop**: Zur interaktive Systemüberwachung.
 * **zoxide**: Intelligenter `cd`-Ersatz, der besuchte Verzeichnisse nach Häufigkeit bewertet. Statt langer Pfade reicht `z <teilname>`.
 * **atuin**: Ersetzt die Standard-Shell-History durch eine durchsuchbare SQLite-Datenbank – mit Zeitstempeln, Exit-Codes und Arbeitsverzeichnis pro Eintrag.
 
 ### 2. Terminal-Emulatoren & Fonts
 Für das beste visuelle Erlebnis empfehle ich:
-* **Terminal**: Alacritty, Kitty oder Ghostty.
 * **Font**: Eine **Nerd Font** (z.B. `JetBrainsMono Nerd Font`), um Symbole korrekt darzustellen.
 
 ## 🚀 Installation
@@ -83,11 +82,10 @@ Dieses Setup nutzt **GitHub Copilot** als zentrale KI-Komponente im Editor.
 - **Copilot (Neovim)**  
   → Inline-Code-Vervollständigung direkt beim Schreiben  
   → Kontextbasierte Vorschläge im aktuellen Buffer  
-  → Minimaler Overhead, keine zusätzlichen AI-Frameworks notwendig  
+  → Minimaler Overhead, keine zusätzlichen AI-Frameworks notwendig
 
 ## ✨ Philosophie dieses Setups
 
 - **Minimal statt overengineered**  
 - **Stabil statt experimentell**  
 - **Schnell statt konfigurationslastig** 
-
