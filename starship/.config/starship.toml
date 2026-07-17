@@ -20,7 +20,7 @@ truncation_symbol = "…/"
 
 # 3. Git Branch (Deine Projekt-Identität)
 [git_branch]
-symbol = ""
+symbol = "•"
 style = "bg:#16161e fg:#7dcfff"
 format = '[ $symbol $branch ]($style)'
 
